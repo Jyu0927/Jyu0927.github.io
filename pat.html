@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Predictive Analytics Tank - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Predictive Analytics Tank</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2 style="margin-bottom: 0.2em;">Predictive Analytics Tank</h2>
+								<h3 style="color:black;"></h3>
+								<p>A remake of the game Binding of Isaac, a roguelike role-playing shooting game. 
+									In this remake, players customize their game by uploading their own songs and designing different game boards.
+									Based on the analysis of the rhythms of the song, evil characters and rewards of various levels appear on the game board.
+								</p>
+								<ul class="contact">
+									<li class="icon fa-calendar-alt">March 2018 - May 2018</li>
+									<li class="icon brands fa-github"><a href="https://github.com/Jyu0927/Beat-of-Issac">https://github.com/Jyu0927/Beat-of-Issac</a></li>
+									<li class="icon brands fa-youtube"><a href="https://www.youtube.com/watch?v=MEFkaWHoCWI&t=1s">https://www.youtube.com/watch?v=MEFkaWHoCWI&t=1s</a></li>
+								</ul>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h2 class="major">Background</h2>
+									<p style="font-size: 1.1em;">The Binding of Isaac was designed by Edmund McMillen and Florian Himsl. 
+										The player controls the biblical character Isaac who has to fight bosses and collect treasures in a multi-level dungeon. 
+										In the game Isaac might be attacked by the monsters and it can also pick up items from the ground to recharge its health, to increase the damage of its shots, etc. 
+										The Binding of Isaac was my favorite game in high school so I decided to add some interesting twists to it for a term project in a course (CMU 15112). 
+										One thing I noticed after was that it doesn’t allow much customization by players - the appearances of monsters and rewards in the original game were determined in a randomized order and it’s almost impossible to make the game harder when all the stages are cleared.
+									</p>
+									<h2 class="major">Adding in Customizable Elements</h2>
+									<h3>Music</h3>
+									<p style="font-size: 1.1em;">
+										Inspired by the popularity of music games (such as Dancing Line) at the time I wanted to incorporate music into the game. 
+										Given a background music, the beat (or energy amplitude) can be used to determine the level of the monsters or the rewards that appear on the board. 
+										Bigger beats where the energy amplitude is at the peak means monsters that are harder to defeat or better rewards will be placed randomly on the board; 
+										smaller beats where the energy amplitude is low means smaller monsters or minor rewards. 
+										The goal of the game is to keep Isaac alive when the music ends. 
+										Players will be able to upload their own songs in wav formats as background musics. 
+									</p>
+									<h3>Game Board</h3>
+									<p style="font-size: 1.1em;">
+										I started with a rectangular plain board and found that without obstacles it was too easy for Isaac to move around and thus winning the game. 
+										Thus I made the game board flexible so that the player can place different obstacles on the board which either blocks or hurts Isaac.	
+									</p>
+									<h2 class="major">Storyboard</h2>
+									<a class="image left" style="padding-left: 3em;"><img src="images/storyboard/1.png" alt="" /><b>I.</b> Before the game starts the player can upload the background music and design their own game board.</a>
+									<a class="image right" style="padding-right: 3em;"><img src="images/storyboard/2.png" alt="" /><b>II.</b> Isaac starts with the basic blood, damage, and range properties. There will be a store where Isaac can buy items from.</a>
+									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+									<a class="image left" style="padding-left: 3em;"><img src="images/storyboard/4.png" alt="" /><b>III.</b> Isaac can move around and shoot in different directions to pick up rewards and kill monsters. It can also upgrade properties by buying items.</a>
+									<a class="image right" style="padding-right: 3em;"><img src="images/storyboard/3.png" alt="" /><b>IV.</b> When there's a small beat, easy-to-kill monsters (such as flies and spiders) or small rewards (such as blood or coins) appear.</a>
+									
+									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+									<a class="image left" style="padding-left: 3em;"><img src="images/storyboard/5.png" alt="" /><b>V.</b> When there's a big beat, monsters that are harder to kill or bigger treasures appear on the game board.</a>
+									<a class="image right" style="padding-right: 3em;"><img src="images/storyboard/6.png" alt="" /><b>VI.</b> Player wins the game if Isaac is still alive when the music ends. Then the player can start over with the next game.</a>
+								
+									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+									
+									<h2 class="major" >Design Implementation</h2>
+									<p>For ease of implementing the added features in this remake version of the game and considering the relative short time frame given, 
+										all the images of characters, items, and the board were directly cropped from the original game.
+									</p>
+									<h3>Game Board</h3>
+									<p>Players can place pots, stones, or mushrooms as obstacles which block Isaac's way when it's moving around. Monsters that fly won't be affected by these. Players can also place spines which hurt Isaac when it walks over them. Monsters who walk can also be hurt by spines.
+									</p>
+									<h3>Isaac</h3>
+									<p>Isaac can walk and shoot in 4 directions. Isaac's walking direction doesn't restrain its shooting direction. Its starting shot damage is 10.
+									</p>
+									<h3>Monsters</h3>
+									<section>
+										<p>Monsters are categorized into different levels based on how they attack Isaac and their healths. 
+											Isaac can be hurt by a monster by touching the monster, or being shot by the monster's bullet.
+											A bigger beat in the music corresponds to a higher level monster.</p>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Level</th>
+														<th>Health</th>
+														<th>Name</th>
+														<th>Attack Pattern</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>I</td>
+														<td>30</td>
+														<td>Spider</td>
+														<td>Walks randomly on the board</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td>Dodging Monster</td>
+														<td>Moves away from Isaac</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td>Evil Isaac</td>
+														<td>Stays where they are and shoot bullets towards Isaac's direction</td>
+													</tr>
+													<tr>
+														<td>II</td>
+														<td>50</td>
+														<td>Big Fly</td>
+														<td>Moves towards Isaac and shoot bullets in 4 directions</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td>Huge Fly</td>
+														<td>Stays where they are and shoot bullets in 3 directions</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td>Ghost</td>
+														<td>Haunts Isaac with very fast speed</td>
+													</tr>
+													<tr>
+														<td>III</td>
+														<td>150</td>
+														<td>Lord of the Flies</td>
+														<td>Flies around and shoot out different flies intermittently</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td>Firing Monster</td>
+														<td>Moves along the top edge and shoot a wide beam of lava intermittently</td>
+													</tr>
+												</tbody>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+									<h3>Rewards</h3>
+									<section>
+										<p></p>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Level</th>
+														<th>Name</th>
+														<th>Effect</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>I</td>
+														<td>Coin</td>
+														<td>Adds money so users can buy items from the store</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>Red Heart</td>
+														<td>Fills one empty blood cell, Isaac can't pick up the item if blood cells are full</td>
+													</tr>
+													<tr>
+														<td>II</td>
+														<td>Blue Heart</td>
+														<td>Adds one extra blue heart, not limited by number of blood cells</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>Key</td>
+														<td>Can be used to open Golden chest</td>
+													</tr>
+													<tr>
+														<td>III</td>
+														<td>Black Heart</td>
+														<td>Adds one extra black heart - when Isaac losses a black heart all monsters on the board will be hurt</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>Golden Chest</td>
+														<td>If opened with a key, places several level I or II rewards on the board</td>
+													</tr>
+												</tbody>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+									<h3>Items</h3>
+									<p>Isaac can buy items from the store. Diffrent items help enhance Isaac's different properties such as moving speed, shooting range, and shooting damage. 
+									</p>
+									<h3>Beat Detection</h3>
+									<p>To guarantee that there will be monsters and rewards appearing on the board continuously throughout the song, the beat detection is set up detect local energy surges instead of absolute ones. 
+										The algorithm keeps track of 43 energy histories and if the local energy if greater than the average energy calculated from the history, it's recognized as a beat. The determination of level of the beat, however, is based on the absolute value of the beat's energy surge.
+									</p>
+									<h2 class="major">Video DEMO</h2>
+									<iframe  width="955" height="540" src="https://www.youtube.com/embed/MEFkaWHoCWI" frameborder="0" allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
