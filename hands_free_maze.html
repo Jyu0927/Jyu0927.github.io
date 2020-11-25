@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hands-free remote balance maze - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html"></a>Hands-free remote balance maze</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+				<section id="wrapper">
+					<header>
+						<div class="inner">
+							<h2 style="margin-bottom: 0.2em;">Hands-free remote balance maze</h2>
+							<h3 style="color:black;">group course project</h3>
+							<p>This project aims to create a two-axis balance maze that can be played remotely via hands-free interaction.</p>
+							<ul class="contact">
+								<li class="icon fa-calendar-alt">Nov - Dec 2020</li>
+                                <li class="icon brands fa-youtube"><a href="https://youtu.be/gO9iAuwr6mk">https://youtu.be/gO9iAuwr6mk</a></li>
+                                <li class="icon fa-file"><a href="https://a360.co/3paEn0S">CAD design file</a></li>
+                                <li class="icon fa-file"><a href="files/sketch_nov22a.ino">arduino code download</a></li>
+                            
+							</ul>
+						</div>
+					</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<h2 class="major">Narrative Description</h2>
+									<p style="font-size: 1.1em;">
+                                    Our project, the hands-free balance maze, is a mechanical marble maze that allows different remote control methods: via handsfree sensors or even a mobile app. The purpose of the project is to provide entertainment, propose a new method for interaction &amp; control (with each hand or your phone's tilt controlling an axis of movement), and to allow remote control of the device via the MQTT server. The game board can be installed anywhere as long as it’s laying on a flat surface; like a desk or floor.&nbsp;</p>
+                                    <p style="font-size: 1.1em;">The maze lies flat with the marble at the start position when no player is present. A player can start the game by simply placing his or her hands over the sensors. The proximity between each hand and each sensor determines the degree of tilting along the axis. The player then needs to get the marble ball to the endpoint while avoiding holes on the board that the ball can fall into. When the ball successfully reaches the end there might be a light or music component signaling the success.&nbsp;Whoever the audience is, they will enjoy the tricky challenge and remember the celebration at the end. </p>
+                                    <p style="font-size: 1.1em;">The project will be successful if the device can provide an entertaining experience for the user and that the user feels comfortable controlling the board remotely using the sensors or through a phone.&nbsp;User interaction is key. </p>
+                                    </p>
+									<h2 class="major">Technical Outline</h2>
+                                    <a class="image"><img src="images/maze_sketch.jpg" alt="" style="width:950px;"/></a>
+									<p style="font-size: 1.1em;">
+										We are planning to make the game board using three layers of plywood boxes connected together using shoulder screws & ball bearings; very much like a Gimbal frame. Two hobby servos will be placed in between every two layers to enable rotation/tilting of the first and second inner boxes. These two servos are connected to two sonar rangers that convert input from different hands into tilting movement along the two axes.
+                                        The innermost box will contain an empty bottom compartment, which will serve as the marble drop. Anytime the player's marble drops through a hole on the maze surface, they will be able to tilt the board to one side and retrieve it easily.
+                                    </p><p style="font-size: 1.1em;">The maze frame can be made lightweight by using press-fit 6mm laser cut plywood parts, which will enable relatively easy movement of the boxes by the two rotating servos. Shoulder screws and ball bearings will allow the boxes to rotate on their axes. Finally, two sonar rangers will be used as input sensors prompting servo movement, while a phototransistor can be used to sense when a marble reaches the maze finish. 
+                                    </p>
+                                    <h2 class="major">CAD design</h2>
+                                    <a class="image"><img src="images/cad_2.jpg" alt="" style="height:275px;"/></a>
+                                    <a class="image"><img src="images/cad_1.jpg" alt="" style="height:275px;"/></a>
+                                    <p style="font-size: 1.1em;">The complete CAD design can be accessed at <a href="https://a360.co/3paEn0S">https://a360.co/3paEn0S</a>
+                                    <h2 class = "major">Bill of Materials</h2>
+                                    <section>
+										<p></p>
+										<div class="table-wrapper">
+											<table>
+                                                <col style="width:20%">
+                                                <col style="width:5%">
+                                                <col style="width:50%">
+                                                <col style="width:25%">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Qauntity</th>
+                                                        <th>Parts Expected to be Used</th>
+                                                        <th>Design and Fabrication Methods</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>base ground</td>
+														<td>1</td>
+                                                        <td>plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+													</tr>
+													<tr>
+														<td>wires and power source</td>
+														<td>1</td>
+														<td>5V battery, breadboard, resistors, UNO R3 controller board, screws, wires, plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+                                                    </tr>
+													<tr>
+														<td>sensor station</td>
+														<td>1</td>
+                                                        <td>one ultrasonic sensor, breadboards, wires</td>
+                                                        <td>CAD design and laser cutting</td>
+													</tr>
+													<tr>
+														<td>marble receiver</td>
+														<td>1</td>
+                                                        <td>plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+													</tr>
+													<tr>
+														<td>marble sensor</td>
+														<td>1</td>
+                                                        <td>optical proximity sensor, breadboard, plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+                                                    </tr>
+													<tr>
+														<td>rotation unit</td>
+														<td>2</td>
+														<td>hobby servos, popsicle sticks, paper clips, shoulder screws, bush bearings, unthreaded spacers, hex nuts, wires</td>
+                                                        <td>Drill parts and assemble</td>
+                                                    </tr>
+                                                    <tr>
+														<td>shield box</td>
+														<td>3</td>
+														<td>plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+                                                    </tr>
+                                                    <tr>
+														<td>game board</td>
+														<td>1</td>
+														<td>plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+                                                    </tr>
+                                                    <tr>
+														<td>tilted marble board</td>
+														<td>1</td>
+														<td>plywood</td>
+                                                        <td>CAD design and laser cutting</td>
+                                                    </tr>
+												</tbody>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+                                        <h2 class="major">Prototype development</h2>
+                                        <p style="font-size: 1.1em;">In the first phase of prototype development we mainly assembled the laser cut boards and hooby servos. We made sure that the connecting parts (connected by shoulder screws and bush bearings) between different layers are light-weight enough so that the rotation of the frame can be supported by hobby servos.
+                                            In this demo we used two range sensors, with each directly sensing distance to one hand then parse the data to control the servo. During this phase the maze requires two hands to control. </p>
+                                            
+                                    <p align="center"><iframe width="800" height="470" src="https://www.youtube.com/embed/UHqz5mfvK9s" frameborder="0" allowfullscreen>
+                                    </iframe></p>
+                                    <p style="font-size: 1.1em;">
+                                        Then we mounted the maze board onto the frame and assembled a small ball receiveing box. We explored the possibility of using only one hand (one waterbottle in this demo) to control the board, hoping that such correspondence would be more intuitive for the player.
+                                        We succesfully constructed a taped play area in which diagonally placed range sensors can receive accurate x and y data of the hand's position. We applied filters and tested transmitting the data across mqtt brige so we can achieve remote playing.
+                                        We did succesfully play the game remotely across half the earth. However we also noticed that there is a significant lag between movement of the waterbottle and corresponding changes in the data received. The lag results in a great challenge in providing a smooth playing experience for the player.
+                                    </p>
+                                    <p align="center"><iframe  width="800" height="470" src="https://www.youtube.com/embed/gO9iAuwr6mk" frameborder="0" allowfullscreen>
+                                    </iframe></p>
+								</div>
+									
+							</div>
+
+					</section>
+
+	
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
