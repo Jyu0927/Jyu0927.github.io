@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Solid State by HTML5 UP</title>
+		<title>Interactive reader for visually impaired people</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="index.html"></a>Interactive reader for visually impaired people</h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -41,87 +41,49 @@
 					</nav>
 
 				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Generic</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
-							</div>
-						</header>
+				<section id="wrapper">
+					<header>
+						<div class="inner">
+							<h2 style="margin-bottom: 0.2em;">Interactive reader for visually impaired people</h2>
+							<h3 style="color:black;text-transform: unset;">Research Assistant for Tsinghua Univeristy Pervasive Computing Group (with Prof. Chun Yu), Beijing</h3>
+							<p>An interactive reader APP designed for visually impaired people.</p>
+							<ul class="contact">
+								<li class="icon fa-calendar-alt">July 2020 - present</li>
+								<li class="icon brands fa-github"><a href="https://github.com/Jyu0927/AccessibleReader">https://github.com/Jyu0927/AccessibleReader</a></li>
+								<li class="icon brands fa-youtube"><a href="https://youtu.be/moauVCfziqw">https://youtu.be/moauVCfziqw</a></li>
+							</ul>
+						</div>
+					</header>
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
+									<h2 class="major">Background</h2>
+									<p style="font-size: 1.1em;">
+										Reading is an important way through which visually impaired (VI) people can obtain knowledge. Many have learned to read braille books or refreshable braille displays at schools. Furthermore with the development of accessible technologies on mobile devices, VI people have gradually adapted to using screen readers to read text from laptops and phones. Yet existing text readers are extremely limited - braille books are heavy and perishable, refreshable braille displays are expensive and not yet well developed, and most mobile text readers are inflexible thus have poor performance in helping with advanced learning (academic reading). As a result VI people are facing inefficiencies in interaction, such as difficulties in skimming, revisiting, and labelling. This project focuses on research, design, and evaluation on ways to revisit certain parts of the text, a theme which has been poorly researched by existing literatures.</p>
+									<h2 class="major">Prototype Development</h2>
+							
+									<p style="font-size: 1.1em;">
+										The difficulties about revisiting contents while touch reading text is that touch screen transforms braille books’ haptic feedback into auditory feedback which is linear. However efficient revisit needs non-linear clues. In order to come up with better designs we did user research to understand the current status and problems of VI people using mobile devices. Based on the semi structured interviews we concluded some design guidelines and developed prototypes based on that.
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
-
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-
+									</p>
+									<p style="font-size: 1.1em;">
+										Currently we focus on reading Chinese texts as we are working and testing with Chinese VI people. In the touch reaching mode to avoid a feeling of disconnectedness brought by touch reading single Chinese characters, we group the text into words of 2-6 words. Below is a mindmap of gestures of different functionalities and leading to different modes (listening and touching).
+										
+										
+									</p>
+										<a class="image"><img src="images/arduino.jpg" alt="" style="width:500px;"/></a>
+									<p></p>
+										<h2 class="major">Video DEMO</h2>
+									<p align="center"><iframe  width="800" height="470" src="https://www.youtube.com/embed/moauVCfziqw" frameborder="0" allowfullscreen>
+									</iframe></p>
 								</div>
+									
 							</div>
 
 					</section>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+	
 
 			</div>
 
