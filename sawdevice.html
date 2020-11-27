@@ -48,9 +48,9 @@
 							<h3 style="color:black; text-transform: unset;">Research Assistant for CMU Human Computer Interaction Institute DevLab (with Prof. Scott Hudson), Pittsburgh</h3>
 							<p>This project aims to explore cost-efficient and simple ways to fabricate wireless and passive surface acoustic wave (SAW) devices for input devices, activity and object recognition. Accessibility of such devices in terms of design space and cost brings new possibilities for interactive experiences.</p>
 							<ul class="contact">
-								<li class="icon fa-calendar-alt">Oct 2020</li>
-								<li class="icon brands fa-github"><a href="https://github.com/Jyu0927/Triangular-Walking-Sensor">https://github.com/Jyu0927/Triangular-Walking-Sensor</a></li>
-								<li class="icon brands fa-youtube"><a href="https://youtu.be/moauVCfziqw">https://youtu.be/moauVCfziqw</a></li>
+								<li class="icon fa-calendar-alt">Sept 2019 - Aug 2020</li>
+								<li class="icon brands fa-github"><a href="https://github.com/Jyu0927/SAW-device">https://github.com/Jyu0927/SAW-device</a></li>
+							
 							</ul>
 						</div>
 					</header>
@@ -58,17 +58,96 @@
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
-									<h2 class="major">Design Intensions</h2>
+									<h2 class="major">Background</h2>
 									<p style="font-size: 1.1em;">
-										The objective of our project was to create a moving structure that would indicate the state and behavior of a remote person — being present, absent, or walking. If the remote person is close to the sonar sensor, then the person is present. For this state, the servo will move the structure to an “open” position. In other words, a triangle will be visible in the center of the device. If the remote person is outside of the specified range, then the person is absent. The servo will then move the structure to a “closed” position, meaning the popsicle sticks will move to overlap each other, concealing the triangle. When the person is continuously walking, the sticks will mirror this action and continuously move. This particular movement corresponds to the distance the person is away from the sensor. The overall structure is meant to be a wall-mounted decorative piece that conveys a person’s walking behavior and whether they are present or absent from the designated area.</p>
-									<h2 class="major">Arduino Setup</h2>
+										Surface acoustic wave (SAW) devices, which are commonly used for motion detection such as detecting gestures in mobile phones, are composed of a single piece of piezoelectric material (SAW substrate) and one or more interdigital transducers (IDTs) which are two interweaving comb-shaped parallel patterns of metallic (thus conductive) electrodes. When an electric signal is sent to an IDT transducer pattern the applied electric field generates acoustic waves due to the converse piezoelectric effect. This wave propagates through the surface of the SAW substrate for some distance and passes across a reflector pattern. A fraction of the acoustic wave is reflected by the reflector pattern and thus propagates back to the input IDT pattern. Then once again due to the piezoelectric effect, the acoustic wave gives rise to electric signals, resulting in a return signal, possibly with different phases as compared to the input signal. During such a process, vibrations in an environment interfere with the propagation of acoustic waves, changing some characteristics of the waves. Thus with a returning signal in an undisturbed environment serving as a baseline for comparison, we expect to see a significant change in returning signal patterns when vibrations exist. SAW devices can, therefore, be used for various purposes like temperature sensing, humidity detection, liquid presence detection and motion detection.
+
+									</p>
+									<p style="font-size: 1.1em;">
+										Traditional IDT patterning methods in SAW devices require sputtering machines, clean room techniques, and photolithographic tooling which are all expensive. Thus, the ability to manufacture SAW devices has remained an impediment to further exploration in non-mass-production scenarios like research, encouraging researchers to invent new devices or to further explore in this domain. 
+									</p>
+									<p style="font-size: 1.1em;">
+										While the machinery and techniques remain inaccessible, the cost of raw materials (piezoelectric substrates) used for SAW device patterning has dropped significantly due to the adoption of SAW devices in mobile phone industries. We will utilize a method called Direct Ink Writing (more cost-efficient and has less stringent requirements on patterning environments) whereby metallic substances are extruded and patterned over Lithium niobate (LiNbO3) substrates to produce a SAW device. This project also aims to explore how to make SAW devices wireless and passive by using antennas - traditional SAW devices send electric signals in a wired way thus requiring external power support. By finding low-cost, simple, wireless, self-powered, and thus accessible SAW devices, the project contributes to future applications on interactive experiences in various environments.
+									</p>
+									<h2 class="major">research question</h2>
+									<p style="font-size: 1.1em;">
+										We aim to exploit this price drop in substrate material along with a newly available low-cost robotic print technology called Direct-Ink-Write (DIW) to extrude metallic substances at micron-scale. Our project aims to explore the full capabilities of DIW printers, understanding its benefits and limitations towards manufacturing low-cost SAW devices. The project contributes to present a low-cost, easily accessible, and wireless vibration sensing and motion detection device. Specifically, the project will seek to answer the following research questions: 
+									</p>
+									<div class="row">
+										<div>
+											<ol>
+												<li>SAW device fabrication<br>a. Is it possible to print a functioning DIW printed SAW sensor? <br>
+													b. What is the scale at which DIW printers can pattern IDTs/electrodes for a functioning SAW device? <br>
+													c. What are the different device parameters such as finger size, gap size, etc?
+													</li>
+					
+												<li>Device characterization <br> a. What is the frequency of operation of a DIW printed device? <br>
+													b. How responsive is it to external stimuli such as blowing, moisture, etc? 
+													</li>
+												<li>Engineering a software pipeline<br> a. What are the required software components to extract signals from the sensor? <br>
+													b. How to build a software pipeline to process the signals?  
+													</li>
+												<li>Building sensing applications <br> a. What are the different sensing applications that SAW devices can enable? <br>
+													b. For instance, could we enable temperature sensing, humidity detection, liquid presence detection, and motion detection, etc? 
+													</li>
+											</ol>
+										</div>
+									</div>
+									<h2 class="major">Project Design</h2>
+									<div class="row">
+										<div>
+											<ol>
+												<li>SAW device fabrication: We will test and print silver nano ink materials using the printer and measure the electrode size using an optical microscope to characterize the device parameters. Initial exploration of different parameters would start from 100um, 125um, 150um, 200um finger size, and 100um, 125um, 150um, 200um gap size to determine the ideal parameters for the print method. After printing different devices, we will characterize the device using an LCR meter conductivity measurement to ensure the traces patterned are discontinuous. Finally, after determining the optimal print parameters, we will then proceed to test the printed device and characterize them.
+												</li>
+					
+												<li>Device characterization: To test the printed device we will be using NanoVNA which is a small thus portable handheld vector network analyzer. Connecting the device to NanoVNA, We aim to see a distinct phase change between outcoming and incoming acoustic waves when there are vibrations around the device. We will test different movements and vibrations such as blowing over the substrate surface, knocking the table, etc. Through calibration steps for NanoVNA we can get a measurement of outcoming-incoming phase difference when there is no added vibration-that helps us exclude the influence of the outside environment when doing the actual vibration testing. Furthermore, NanoVNA has some well developed applications such as NanoVNA Saver that allows us to plot different graphs thus allowing us to see the phase shift more clearly. 
+												</li>
+												<li>Engineering a software pipeline: The graphs that can be plotted by the NanoVNA Saver software might not meet our need to see a phase shift over time and we also need to extract the raw phase data for future machine learning analyzing purposes. So we are planning to write python scripts to process the raw data to plot a live frequency and phase intensity graph. </li>
+												<li>Building Sensing Applications: After we can access the raw phase data and can visually present the phase shift when there is a vibration we aim to distinguish different patterns of phase shifts depending on different vibrations. Through building and training machine learning models using empirical data gathered from experiments, we will explore sensing applications for purposes such as material classification (liquids, solid objects, powder), blow sensing (alcohol, perfume, water spray), and surface application (passive temperature sensor, low-amplitude gesture sensing)</li>
+											</ol>
+										</div>
+									</div>
+									<h2 class="major">substrate set up and fabrication</h2>
 							
 									<p style="font-size: 1.1em;">
-										The structure is powered by an arduino with a sonar sensor taking in user input and a hobby servo that further connects to one of the moving popsicle sticks.</p>
-										<a class="image"><img src="images/arduino.jpg" alt="" style="width:500px;"/></a>
-									<p></p>
+										We used a voltera printer to fabricate then test different characterizations of transducers.
+										</p>
+										<a class="image"><img src="images/saw_printer.JPG" alt="" style="width:500px;"/></a>
+										<p></p>
+									<p style="font-size: 1.1em;">
+										An example of the transducers we fabricated: 
+										</p>
+										<a class="image"><img src="images/saw_substrate.jpg" alt="" style="width:500px;"/></a>
+										<p></p>
+									<p style="font-size: 1.1em;">
+										We then set up the IDTs to be connected to a NanoVNA for sending and receiving of RF signals.
+										</p>
+										<a class="image"><img src="images/saw_connected.jpg" alt="" style="width:500px;"/></a>
+										<p></p>
+									<h2 class="major">Data collection and visualization</h2>
+									<p style="font-size: 1.1em;">
+										Based on some open source python scripts that deals with connecting to and manipulating the NanoVNA from a laptop, we made some modifications to help with our own data collection and visualization.
+										Orginally the scripts only support capturing of one sweep. We modified the program to support continuous sending and scanning of signals. Since we are putting different food and liquid items onto the substrate we plotted a continuous heatmap of phase difference based on a baseline and frequency bands.
+										</p>
+										<p style="font-size: 1.1em;">
+											We went through different phases of data collection, data visualization, and detection item selection. For both food and liquid items, we first tested different items to see if their signal displays are different. Below is an example of such tests. </p>
+										<a class="image"><img src="images/liquid_vis.jpg" alt="" style="width:800px;"/></a>
+										<p></p>
+										<p style="font-size: 1.1em;">Then we picked those with significant differences to visualize their signals across different sections to check the consistency. Below are some examples of such tests.</p>
+										<a class="image"><img src="images/apple.jpg" alt="" style="width:400px;"/></a>
+										<a class="image"><img src="images/Peach.jpg" alt="" style="width:400px;"/></a>
+										<a class="image"><img src="images/Carrot.jpg" alt="" style="width:400px;"/></a>
+										<a class="image"><img src="images/tomato.jpg" alt="" style="width:400px;"/></a>
+										<p></p>
+										<h2 class="major">real-time prediction</h2>
+										<p style="font-size: 1.1em;">
+											We also developed a machine learning pipeline (using random forest) to collect data and train the model for real time prediction of liquid and food items. Currently, the accuracy of the traning model is still limited, both becuase of signal qualities and model training method. 
+											</p>
 										<h2 class="major">Video DEMO</h2>
-									<p align="center"><iframe  width="800" height="470" src="https://www.youtube.com/embed/moauVCfziqw" frameborder="0" allowfullscreen>
+										<p style="font-size: 1.1em;">
+										Below is an example of the live training session we did. (as the data collection phase is time consuming, you can adjust the playback speed accordingly)
+									</p>
+									<p align="center"><iframe  width="800" height="470" src="https://www.youtube.com/embed/ESAj20XpoQ4" frameborder="0" allowfullscreen>
 									</iframe></p>
 								</div>
 									
